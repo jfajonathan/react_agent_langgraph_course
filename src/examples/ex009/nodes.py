@@ -15,7 +15,7 @@ def call_llm(state: State, runtime: Runtime[Context]) -> State:
     user_type = ctx.user_type
 
     model_provider = "ollama" if user_type == "plus" else "ollama"  # noqa: RUF034
-    model = "gpt-oss:20b" if user_type == "plus" else "qwen3-coder:30b"
+    model = "gpt-oss:latest" if user_type == "plus" else "qwen3-coder:30b"
 
     llm_with_tools = load_llm().bind_tools(TOOLS)
     llm_with_config = llm_with_tools.with_config(

@@ -8,7 +8,7 @@ def load_llm() -> BaseChatModel:
     model = cast(
         "BaseChatModel",
         init_chat_model(
-            model="gpt-oss:20b",
+            model="gpt-oss:latest",
             model_provider="ollama",
             base_url="http://127.0.0.1:11434",
             temperature=0.2,

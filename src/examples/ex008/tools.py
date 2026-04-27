@@ -12,6 +12,7 @@ def multiply(a: float, b: float) -> float:
     Returns:
         the resulting float of the equation a * b
     """
+    print(f"> multiplying {a} and {b}")
     return a * b
 
 
